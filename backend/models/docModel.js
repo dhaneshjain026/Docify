@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb://127.0.0.1:27017/docify");
+// Replace <db_password> with your actual password
+mongoose.connect("mongodb+srv://dhanesha:dhanesha@docify.mn5lk.mongodb.net/docify?retryWrites=true&w=majority&appName=docify");
 
-const docSchema = mongoose.Schema({
+const docSchema = new mongoose.Schema({
   title: String,
   content: {
     type: String,
@@ -19,4 +20,5 @@ const docSchema = mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('Document', docSchema);
+// Check if the 'Document' model is already compiled, use it; otherwise, compile it
+module.exports = mongoose.models.Document || mongoose.model('Document', docSchema);
