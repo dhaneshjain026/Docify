@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Set up CORS to allow your Vercel frontend
 const corsOptions = {
-  origin: '', // Replace with your Vercel frontend URL
+  origin: 'https://docify-gilt.vercel.app', // Replace with your Vercel frontend URL
   optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
