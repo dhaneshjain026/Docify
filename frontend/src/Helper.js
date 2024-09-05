@@ -1,1 +1,1 @@
-export const api_base_url = "https://api.render.com/deploy/srv-crcv6388fa8c73bf1qa0?key=muNxBRLwyVo";
+export const api_base_url = "https://mern-docify-2.onrender.com";
